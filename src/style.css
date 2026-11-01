@@ -229,31 +229,14 @@ a:hover {
   padding: 0.75rem var(--gutter) 0;
 }
 
-.wordmark {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  text-decoration: none;
-  color: var(--navy-deep);
-}
-
-.wordmark-mark {
-  width: 2.3rem;
-  height: 2.3rem;
-  flex: none;
-}
-
-.wordmark-text {
-  font-family: var(--font-head);
-  font-weight: 700;
-  font-size: 1.3rem;
-  line-height: 1;
-}
-
-.wordmark-text span {
+.logo {
+  justify-self: start;
   display: block;
-  font-weight: 600;
-  color: var(--muted);
+}
+
+.logo img {
+  width: auto;
+  height: 3.4rem;
 }
 
 .header-call {
@@ -305,7 +288,11 @@ a:hover {
 
 @media (min-width: 900px) {
   :root {
-    --header-h: 5rem;
+    --header-h: 5.75rem;
+  }
+
+  .logo img {
+    height: 4.5rem;
   }
 
   .site-header {
