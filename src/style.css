@@ -1,23 +1,22 @@
 /* Fabulous Fences and Gates
-   Colours taken from his jobs: charcoal Colorbond, white aluminium slats,
-   sandstone pavers and pale exposed-aggregate concrete. */
+   Navy rgb(39, 49, 83) as the main colour, with sandstone accents from his
+   jobs and plain white backgrounds. */
 
 :root {
-  --charcoal: #2b2e31;
-  --charcoal-deep: #1f2224;
+  --navy: #273153; /* rgb(39, 49, 83) */
+  --navy-deep: #1b2340;
   --ink: #24282b;
   --muted: #545a5f;
-  --concrete: #ebebe8;
   --line: #cfd0cc;
   --white: #ffffff;
   --sand: #d8b47c;
   --sand-light: #e8cc9d;
   --success: #1d6b3a;
   --error: #a3261b;
-  --focus: #1f2224;
+  --focus: #273153;
 
   --font-body: 'Barlow', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-head: 'Barlow Condensed', 'Arial Narrow', system-ui, sans-serif;
+  --font-head: 'EB Garamond', Georgia, serif;
 
   --wrap: 1180px;
   --gutter: clamp(1.1rem, 4vw, 2.5rem);
@@ -65,9 +64,11 @@ h1,
 h2,
 h3 {
   font-family: var(--font-head);
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: 0.005em;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.005em;
+  /* EB Garamond defaults to old-style figures; keep numbers like "40" level */
+  font-variant-numeric: lining-nums;
   margin: 0 0 0.5em;
   text-wrap: balance;
 }
@@ -77,8 +78,8 @@ h2 {
 }
 
 h3 {
-  font-size: clamp(1.5rem, 3.6vw, 1.9rem);
-  font-weight: 600;
+  font-size: clamp(1.55rem, 3.6vw, 1.95rem);
+  font-weight: 500;
 }
 
 p {
@@ -131,7 +132,7 @@ a:hover {
   top: -4rem;
   z-index: 100;
   padding: 0.7rem 1rem;
-  background: var(--charcoal);
+  background: var(--navy);
   color: var(--white);
   font-weight: 600;
 }
@@ -185,7 +186,7 @@ a:hover {
 
 .btn-primary {
   background: var(--sand);
-  color: var(--charcoal-deep);
+  color: var(--navy-deep);
 }
 
 .btn-primary:hover {
@@ -199,16 +200,16 @@ a:hover {
 
 .btn-outline-light:hover {
   background: var(--white);
-  color: var(--charcoal-deep);
+  color: var(--navy-deep);
 }
 
 .btn-dark {
-  background: var(--charcoal);
+  background: var(--navy);
   color: var(--white);
 }
 
 .btn-dark:hover {
-  background: var(--charcoal-deep);
+  background: var(--navy-deep);
 }
 
 /* ---------- Header ---------- */
@@ -233,7 +234,7 @@ a:hover {
   align-items: center;
   gap: 0.6rem;
   text-decoration: none;
-  color: var(--charcoal-deep);
+  color: var(--navy-deep);
 }
 
 .wordmark-mark {
@@ -263,7 +264,7 @@ a:hover {
   gap: 0.45rem;
   padding: 0.6rem 0.85rem;
   border-radius: 3px;
-  background: var(--charcoal);
+  background: var(--navy);
   color: var(--white);
   font-weight: 700;
   font-size: 1rem;
@@ -272,7 +273,7 @@ a:hover {
 }
 
 .header-call:hover {
-  background: var(--charcoal-deep);
+  background: var(--navy-deep);
 }
 
 .site-nav {
@@ -342,7 +343,7 @@ a:hover {
 
 .hero {
   display: grid;
-  background: var(--charcoal);
+  background: var(--navy);
 }
 
 .hero-text {
@@ -357,8 +358,8 @@ a:hover {
 }
 
 .hero h1 {
-  font-size: clamp(2.5rem, 9.5vw, 4.6rem);
-  max-width: 13ch;
+  font-size: clamp(2.4rem, 8.6vw, 4.4rem);
+  max-width: 14ch;
 }
 
 .hero-lede {
@@ -419,7 +420,7 @@ a:hover {
   margin: 0;
   padding: 0;
   list-style: none;
-  background: var(--concrete);
+  background: var(--white);
   border-bottom: 1px solid var(--line);
 }
 
@@ -468,7 +469,7 @@ a:hover {
 }
 
 .service-text {
-  border-top: 4px solid var(--charcoal);
+  border-top: 4px solid var(--navy);
   padding-top: 1rem;
 }
 
@@ -524,8 +525,10 @@ a:hover {
 
 /* ---------- Gallery ---------- */
 
-.work {
-  background: var(--concrete);
+.work,
+.about {
+  background: var(--white);
+  border-top: 1px solid var(--line);
 }
 
 .gallery {
@@ -550,7 +553,7 @@ a:hover {
   width: 100%;
   padding: 0;
   border: 0;
-  background: var(--charcoal);
+  background: var(--navy);
   cursor: zoom-in;
 }
 
@@ -602,12 +605,12 @@ a:hover {
   margin: 0;
   padding: 3.5rem 0.75rem 1rem;
   border: 0;
-  background: rgba(18, 20, 22, 0.96);
+  background: rgba(17, 22, 40, 0.96);
   color: var(--white);
 }
 
 .lightbox::backdrop {
-  background: rgba(18, 20, 22, 0.9);
+  background: rgba(17, 22, 40, 0.9);
 }
 
 .lightbox[open] {
@@ -749,7 +752,7 @@ a:hover {
 /* ---------- Service area ---------- */
 
 .area {
-  background: var(--charcoal);
+  background: var(--navy);
   background-image: repeating-linear-gradient(
     90deg,
     rgba(255, 255, 255, 0.025) 0 12px,
@@ -785,7 +788,7 @@ a:hover {
 /* ---------- Quote ---------- */
 
 .quote {
-  background: var(--concrete);
+  background: var(--white);
 }
 
 .quote-grid {
@@ -852,7 +855,7 @@ input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
   outline-offset: 0;
-  border-color: var(--charcoal-deep);
+  border-color: var(--navy-deep);
 }
 
 .honeypot {
@@ -878,6 +881,7 @@ textarea:focus-visible {
 .form-status {
   margin-top: 1.25rem;
   padding: 0.9rem 1rem;
+  border: 1px solid var(--line);
   border-left: 4px solid;
   background: var(--white);
   font-weight: 600;
@@ -897,7 +901,8 @@ textarea:focus-visible {
   align-self: start;
   padding: 1.75rem;
   background: var(--white);
-  border-top: 4px solid var(--charcoal);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--navy);
 }
 
 .headshot {
@@ -920,7 +925,8 @@ textarea:focus-visible {
   margin: 0.2rem 0 1rem;
   font-family: var(--font-head);
   font-size: 2.1rem;
-  font-weight: 700;
+  font-weight: 600;
+  font-variant-numeric: lining-nums;
   text-decoration: none;
 }
 
@@ -959,7 +965,7 @@ textarea:focus-visible {
 
 .site-footer {
   padding-block: 3rem 1.5rem;
-  background: var(--charcoal-deep);
+  background: var(--navy-deep);
   color: #d9dad8;
 }
 
@@ -1012,7 +1018,7 @@ textarea:focus-visible {
   min-height: 3.6rem;
   padding-bottom: env(safe-area-inset-bottom);
   background: var(--sand);
-  color: var(--charcoal-deep);
+  color: var(--navy-deep);
   font-weight: 700;
   font-size: 1.15rem;
   text-decoration: none;
@@ -1020,7 +1026,7 @@ textarea:focus-visible {
 }
 
 .call-bar:focus-visible {
-  outline-color: var(--charcoal-deep);
+  outline-color: var(--navy-deep);
   outline-offset: -5px;
 }
 
